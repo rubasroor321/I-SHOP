@@ -18,7 +18,7 @@ function authJwt() {
             { url: /\/api\/v1\/products(.*)/, methods: ['GET', 'OPTIONS'] },
             { url: /\/api\/v1\/categories(.*)/, methods: ['GET', 'OPTIONS'] },
             { url: /\/api\/v1\/messages(.*)/, methods: ['GET', 'POST'] },
-            { url: /\/api\/v1\/messages\/send/, methods: ['POST'] }, // تحقق من هنا للسماح بإرسال الرسائل
+            { url: /\/api\/v1\/messages\/send/, methods: ['POST'] }, 
             { url: /\/api\/v1\/messages\/.*\/.*$/, methods: ['GET'] },
             `${api}/users/login`,
             `${api}/users/register`,

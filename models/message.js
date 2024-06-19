@@ -18,7 +18,7 @@ const messageSchema = new mongoose.Schema(
         },
         status: {
             type: String,
-            enum: ['sent', 'received'], // يمكنك تعديل القيم بحسب احتياجاتك
+            enum: ['sent', 'received'], 
             default: 'sent',
         },
         createdAt: {
