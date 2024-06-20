@@ -25,11 +25,16 @@ const api = process.env.API_URL
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
+const corsOptions = {
+    origin: 'http://localhost:3000', 
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], 
+    allowedHeaders: ['Content-Type', 'Authorization'], 
+  };
+  
 //middeware
 app.use(express.json())
 app.use(bodyParser.json())
-app.use(cors())
-app.options('*',cors())
+app.use(cors(corsOptions));
 app.use(authJwt())
 app.use('/public/uploads', express.static(__dirname + '/public/uploads'));
 app.use(errorHandler())
